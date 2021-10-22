@@ -1,0 +1,70 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>SC1224</TITLE>
+</HEAD>
+
+<BODY>
+<H6>Jaguar-Magazin 3</H6>
+<P>
+<H1>SC1224</H1>
+
+<HR>
+
+<P ALIGN=justify>Obwohl der SC1224 eigentlich ein ganz normaler Monitor ist, kann
+es hier Probleme geben. Das Bild l&auml;uft anf&auml;nglich durch und mu&szlig;
+hinten an der Vertikal.Sync-Schraube nachreguliert werden.
+Ich hatte das Problem bei zwei SC1224 Monitoren und wei&szlig; nicht ob
+das bei allen so ist oder ob es auch beim SC1435 auftritt.
+Die Firma 4Play, die auch die CATBOX entwickelt hat, bietet jedoch
+Adapter daf&uuml;r an. Da es verschiedene gibt gehe ich davon aus, da&szlig;
+diese Adapter das Problem l&ouml;sen. Leider wei&szlig; ich nicht wie diese
+Adapter aufgebaut sind. Falls jemand Infos dazu hat kann er sie
+mir per <A HREF="mailto:holger_haslbeck@la.maus.de">E-Mail</A> zukommen lassen.</P>
+
+
+<P ALIGN=justify>Trotzdem mal die grunds&auml;tzliche Beschaltung des SC1224/SC1435-
+Kabels. Es wird nichts zerst&ouml;rt, man mu&szlig; nur beim SC1224
+(vielleicht auch nicht alle!) das Bild nachregeln.</P>
+
+<P>Man braucht:</P>
+
+<UL><LI>1 2*12 poligen Steckkartenverbinder
+<LI>1 13 poliger DIN Kupplung (gibt es z.B. bei Conrad)
+<LI>1 7 poliges Computerkabel (da Adapter, recht kurz, es reicht auch
+   ein kurzes St&uuml;ck Flachbandkabel)</UL>
+
+
+<P><B>Verbindung wie folgt:</B></P>
+<PRE>
+  Monitorkupplung               Jaguar AV-Port
+      DIN 13
+
+Bild
+        7 ---------------------------  4B      (Rot)
+        6 ---------------------------  7A      (Gr&uuml;n)
+       10 ---------------------------  5A      (Blau)
+        9 ---------------------------  5B      (Horizontal Sync)
+       12 ---------------------------  6A      (Vertikal Sync)
+       13 --------------------------- 10B      (Masse)
+Ton
+(Mono)                R1
+               -----[====]-----------  1A      (Audio links)
+               |
+        1 -----+
+               |
+               -----[====]-----------  1B      (Audio rechts)
+                      R2
+
+  R1,R2 = Widerstand 220 Ohm
+</PRE>
+
+<P ALIGN=justify>F&uuml;r den SC1435 braucht man f&uuml;r den Stereoton ein zus&auml;tzliches
+Audiokabel. Wie beim Multisync/Multiscanmonitor beschrieben.</P>
+
+<HR>
+
+</BODY>
+
+</HTML>

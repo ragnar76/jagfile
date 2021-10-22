@@ -1,0 +1,147 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Technische Informationen</TITLE>
+</HEAD>
+
+<BODY>
+<H1>Technische Informationen</H1>
+<HR>
+<P> The Jaguar has five processors, which are contained in three chips.  Two of
+  the chips are proprietary designs, nicknamed "Tom" and "Jerry".  The third
+  chip is a standard <A HREF="./68kcpu.htm">Motorola 68000</A> used as a coprocessor.  Tom and Jerry are
+  built using an 0.5 micron silicon process.  With proper programming, all
+  five processors can run in parallel.</P>
+<P>
+<P>The Jaguar uses 24-bit addressing, and is reportedly capable of accessing
+   data as follows:</P>
+<P>
+           <UL><LI>Six megabytes cartridge ROM
+<LI>           Eight megabytes DRAM
+<LI>           Two megabytes miscellaneous/expansion</UL>
+<P>
+   <P>All of the processors can access the main DRAM memory area directly.  The
+   Digital Signal Processor and the Graphics Processor can execute code out of
+   either their internal caches, or out of main memory.  The only limitations
+   are that</P>
+<P>
+   <OL ><LI> "jump" instructions in main memory have certain restrictions; the JMP
+          (unconditional jump) command is longword-aligned, while the JR
+          (jump-indexed-by-register) command must be either word- or longword-
+        aligned.  And
+<LI>    running out of the cache is much faster (up to four times faster) and
+          efficient.</OL>
+
+   <P>Some believe that the inability to jump/branch in main memory makes the
+   main memory feature useless.</P>
+
+   <P>Swapping data between the caches and the main memory is a quick, low
+   overhead operation, and therefore the main memory is often used as "swap
+   space" for cache code.  The RISC compiler now included in the Jaguar
+   developer's kit produces code that transparently swaps code through the
+   cache.  This effectively lets developers write RISC code without concern
+   for the cache size limits.</P>
+
+   <P>Compressed cartridge data can be uncompressed in real-time, and ratios of
+   up to 14:1 have been cited.  In theory, a Jaguar cartridge can store up to
+   84 megabytes (672 megabits) of data, though actual results will vary
+   widely (most often, images are compressed, while sound and code are not).
+   Compression is performed with BPEG, an enhanced JPEG image decompression
+   mechanism.  BPEG supercedes the former JagPEG algorithm, working up to 10
+   times faster and with more flexibility.</P>
+
+   <H4>Other Jaguar features:</H4>
+<UL>
+  <LI>Support for <A HREF="./comlynx.htm">ComLynx</A> I/O for communications with the Atari Lynx hand-held
+       game system and networked multiconsole games (on DSP port, accessible
+       by optional add-on connector).  Networking of up to 32 Jaguar units
+       available.
+
+  <LI>The two controller ports can be expanded to support "dozens" of
+     controllers
+
+    <LI>Digital and analog interfaces; 
+    Keyboards, mice, and light guns are possible
+
+  <LI>Expansion port allows connection to cable TV and other networks
+  <LI>Digital Signal Processor port allows connection to modems and digital
+     audio peripherals (such as DAT players)
+  <LI>One megabyte per second serial interface
+  <LI>9600 baud, RS-232 serial port (accessible with optional interface)
+  <LI>General-purpose I/O bits via the cartridge port
+  <LI>Can accomodate future expansions of different processor types, I/O types,
+       video types, and memory types and/or quantities.
+</UL>
+
+<P>The Jaguar is capable of doing the following visual effects:</P>
+<UL>
+  <LI>High-speed scrolling (Object Processor).
+  <LI>Texture mapping on two- and three-dimensional objects (GPU and Blitter).
+  <LI>Morphing one object into another object (GPU).
+  <LI>Scaling, rotation, distortion, and skewing of sprites and images
+       (Object Processor).
+  <LI>Lighting and shading from single and multiple light sources (GPU and
+       Blitter).
+  <LI>Transparency (Object Processor).
+  <LI>"Rendering" up to 850 million one-bit pixels/second (35 million 24-bit
+       pixels/second, 26 million 32-bit pixels/second), or 50 million Goroud
+       shaded pixels/second.  "Rendering" is believed to mean transferring a
+       pixel from a frame buffer to the screen.
+  <LI>Sprites of "unlimited" size and quantity.  Realistically, sprites can be
+       over 1,000 pixels wide/tall, and the number of sprites allowed is
+       limited by processor cycles instead of a fixed value in hardware
+       (Object processor).
+  <LI>Programmable screen resolutions, from 160 to 800 pixels per line.  The
+       resolution can be increased even further with additional hardware up to
+       a reported 1350 pixels per line.
+</UL>
+<P>
+<P>One of the Jaguar modes is called "CRY mode", which supports lighting and
+effects in 3D graphics.  Red, green, and blue color elements are ranged
+from 0 to 255, and the lighting level for any pixel can be changed by
+setting one byte linearly.  E.g., the relative proportions of red, blue,
+and green are indicated with one byte, while a second byte selects an
+overall intensity of 0 to 255.  CRY allows much smoother shading of single
+colors, but doesn't allow blending between colors as smoothly.</P>
+
+<P>Actual graphics performance is hard to measure, as there are no industry-
+standard benchmarks.  Rebellion Software has claimed that the Jaguar can
+render <I>"10,000 Gourard shaded, large, 65536 color, any shape polygons per
+second, while still performing other tasks"</I>.  Presumably this level can
+be increased further with optimized programming.</P>
+
+<HR>
+<MAP NAME="blokbild.map">
+<!--Picture E:\JAGFILE.10\HARDWARE\FERTIGE\BILDER\KONSOLE\BLOKBILD.GIF-->
+<!--Comment -->
+<AREA SHAPE="RECT" COORDS="64,48,129,71" HREF="./blokbild/jerry.htm">
+<!--Comment -->
+<AREA SHAPE="RECT" COORDS="100,79,170,138" HREF="./blokbild/dsp.htm">
+<!--Comment -->
+<AREA SHAPE="RECT" COORDS="99,142,172,200" HREF="./blokbild/clokctrl.htm">
+<!--Comment -->
+<AREA SHAPE="RECT" COORDS="99,261,171,321" HREF="./blokbild/68k.htm">
+<!--Comment -->
+<AREA SHAPE="RECT" COORDS="322,108,394,169" HREF="./blokbild/dramctrl.htm">
+<!--Comment -->
+<AREA SHAPE="RECT" COORDS="431,109,503,169" HREF="./blokbild/dram.htm">
+<!--Comment -->
+<AREA SHAPE="RECT" COORDS="322,172,395,230" HREF="./blokbild/object.htm">
+<!--Comment -->
+<AREA SHAPE="RECT" COORDS="323,235,394,294" HREF="./blokbild/gpu.htm">
+<!--Comment -->
+<AREA SHAPE="RECT" COORDS="323,298,395,357" HREF="./blokbild/blitter.htm">
+<!--Comment -->
+<AREA SHAPE="RECT" COORDS="99,330,172,389" HREF="./blokbild/module.htmm">
+<!--Comment -->
+<AREA SHAPE="RECT" COORDS="211,8,270,423" HREF="./blokbild/64bbus.htm">
+<!--Comment -->
+<AREA SHAPE="RECT" COORDS="330,78,381,100" HREF="./blokbild/tom.htm">
+</MAP>
+<IMG SRC="../../bilder/konsole/BLOKBILD.GIF" WIDTH=517 HEIGHT=467 USEMAP="#blokbild.map">
+<HR>
+
+</BODY>
+
+</HTML>
